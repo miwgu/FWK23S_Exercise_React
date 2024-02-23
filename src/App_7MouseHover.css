@@ -1,0 +1,20 @@
+/* .container{
+  display: flex;
+} */
+
+#square1,
+#square2{
+  width: 100px;
+  height: 100px;
+}
+
+#square1 {
+  background-color: red;
+}
+
+#square2 {
+  background-color: green;
+}
+
+
+

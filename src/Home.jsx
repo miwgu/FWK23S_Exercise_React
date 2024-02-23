@@ -1,8 +1,10 @@
 import React from 'react'
+import Container from 'react-bootstrap/Container';
+
 
 const Home = () => {
   return (
-    <>
+    <Container>
     <div>Home</div>
 
     <ul >
@@ -17,7 +19,7 @@ const Home = () => {
      </li>
     </ul>
 
-  </>
+    </Container>
 
   )
 }

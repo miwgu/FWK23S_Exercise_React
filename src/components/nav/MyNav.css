@@ -1,0 +1,4 @@
+.nav-link-custom a{
+    color: white ; /* !important to override default Bootstrap styles */
+  }
+  
