@@ -21,14 +21,22 @@ function Fetch_useEfftct3() {
     }, 3000)
   }, []) // Körs EN gång när komponenten renderas, tom dependency array
 
-  // Denna funktion loopar igenom alla todos och matchar mot ett specifikt id
-  // Här har vi en ternary operator också, så om id matchas så ska vi kopiera todo objektet men toggla completed, annars fallbacka på todo
-  const completeTodo = (todoId) => {
-    const updatedTodos = todos.map((todo) =>
+  
+  const completeTodo = (todoId, completed) => {
+    /* const updatedTodos = todos.map((todo) =>
       todo.id === todoId ? { ...todo, completed: !todo.completed } : todo
-    )
+    ) */
+    if(completed){
+    const updatedTodos = todos.filter((todo)=>  todo.id !== todoId);
     // Här SETar vi statet för todos
     setTodos(updatedTodos);
+    }else {
+      // If not completed, update the completion status of the todo item
+      const updatedTodos = todos.map((todo) =>
+        todo.id === todoId ? { ...todo, completed: true } : todo
+      );
+      setTodos(updatedTodos);
+    }
   }
 
   return (
