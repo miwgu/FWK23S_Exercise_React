@@ -1,7 +1,7 @@
 import React, {useState, useEffect } from 'react'
 
 
-const Fetch_useEfftct = () => {
+const Fetch_useEfftct = ({searchTerm}) => {
 
  const [data, setData ]= useState(null);
  const [loading, setLoading]= useState(true);
@@ -34,6 +34,13 @@ const Fetch_useEfftct = () => {
 
 }, []);
 
+
+const filteredData = data 
+ ?  data.filter ((item)=>
+     item.title.toLowerCase().includes(searchTerm.toLowerCase())
+)
+: [];
+
   return (
     <div >
       <h1>API Posts</h1>
@@ -42,8 +49,7 @@ const Fetch_useEfftct = () => {
         <div>{`There is a problem fetching the post data - ${error}`}</div>
       )}
       <ul>
-        {data &&
-          data.map(({ id, title }) => (
+        {filteredData.map(({ id, title }) => (
             <li key={id}>
               <h3>{title}</h3>
             </li>

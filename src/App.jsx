@@ -6,17 +6,26 @@ import Props_page from './Props_page'
 import UseEffect_Page from './UseEffect_Page'
 import 'bootstrap/dist/css/bootstrap.min.css';
 import MyNav from './components/nav/MyNav'
+import { useState } from 'react'
 
 function App() {
+  const [searchTerm, setSearchTerm]= useState('');
+
+  const handleSearch = (term) =>{
+    setSearchTerm(term);
+  };
 
   return (
   <div>
-  <MyNav />
+  <MyNav onSearch={handleSearch} />
     <Routes>
      <Route path='/' element={<Home/>}/>
      <Route path='/usestete' element={<UseState_page/>}/>
      <Route path='/props' element={<Props_page/>}/>
-     <Route path='/useeffect' element={<UseEffect_Page/>}/>
+     <Route 
+     path='/useeffect' 
+     element={<UseEffect_Page searchTerm={searchTerm} />}
+     />
     </Routes>
 
   </div>

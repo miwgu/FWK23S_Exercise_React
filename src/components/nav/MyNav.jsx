@@ -5,8 +5,16 @@ import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 import NavDropdown from 'react-bootstrap/NavDropdown';
 import './MyNav.css'
+import {useState } from 'react';
 
-function MyNav() {
+function MyNav({onSearch}) {
+ const [searchTerm, setSearchTerm]= useState('');
+
+ const handleSearch =() =>{
+  onSearch(searchTerm);
+ }
+
+
   return (
     <Navbar bg="primary" expand="lg" fixed="top" >
       <Container>
@@ -18,7 +26,7 @@ function MyNav() {
             <Nav.Link href="/usestete">Usestate</Nav.Link>
             <Nav.Link href="/props">Props</Nav.Link>
             <Nav.Link href="/useeffect">UseEffect</Nav.Link>
-            <NavDropdown title="Dropdown" id="basic-nav-dropdown">
+            <NavDropdown className='nav-droppdown-cunstom' title="Dropdown" id="basic-nav-dropdown">
               <NavDropdown.Item href="#action/3.1">Action</NavDropdown.Item>
               <NavDropdown.Item href="#action/3.2">
                 Another action
@@ -36,8 +44,10 @@ function MyNav() {
               placeholder="Search"
               className="me-2"
               aria-label="Search"
+              value={searchTerm}
+              onChange={(e)=> setSearchTerm(e.target.value)}
             />
-            <Button variant="secondary">Search</Button>
+            <Button variant="secondary"onClick={handleSearch} >Search</Button>
           </Form>
         </Navbar.Collapse>
       </Container>

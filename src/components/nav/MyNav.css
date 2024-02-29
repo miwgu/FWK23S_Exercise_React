@@ -1,4 +1,8 @@
 .nav-link-custom a{
-    color: white ; /* !important to override default Bootstrap styles */
+    color: rgb(251, 251, 251) ; /* !important to override default Bootstrap styles */
   }
   
+.nav-droppdown-cunstomn{
+  background-color: rgb(43, 17, 137);
+
+  }
