@@ -7,6 +7,7 @@ import App_5SwitchText from './App_5SwitchText'
 import App_6Name from './App_6Name'
 import App_2_2count from './App_2_2count'
 import App_7MouseHover from './App_7MouseHover'
+import App_8AddName from './App_8AddName'
 
 const UseState_page = () => {
   return (
@@ -20,6 +21,7 @@ const UseState_page = () => {
     <App_5SwitchText /> 
     <App_6Name />
     <App_7MouseHover />
+    <App_8AddName />
 
     </>
 

@@ -11,6 +11,7 @@ const blogs =[
 
 ]
 
+/* Use props blogsArray */
   return (
     <div>
       <Props_bloglist blogsArray={blogs} test ={"This is a blog test"} />

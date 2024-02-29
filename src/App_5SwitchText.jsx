@@ -6,7 +6,7 @@ function App_5SwitchText() {
     const [text, setText] = useState(false);// default false
     console.log(!text);// true
     const showText = () => setText(!text);
-    const buttonText =text ? "show" : "hide";
+    const buttonText =text ? "hide" : "show";
 
   
     return (
