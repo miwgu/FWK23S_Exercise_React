@@ -7,6 +7,7 @@ import UseEffect_Page from './UseEffect_Page'
 import 'bootstrap/dist/css/bootstrap.min.css';
 import MyNav from './components/nav/MyNav'
 import { useState } from 'react'
+import TodoList_Page from './TodoList_Page'
 
 function App() {
   const [searchTerm, setSearchTerm]= useState('');
@@ -26,6 +27,7 @@ function App() {
      path='/useeffect' 
      element={<UseEffect_Page searchTerm={searchTerm} />}
      />
+     <Route path='/todo' element={<TodoList_Page/>}/>
     </Routes>
 
   </div>

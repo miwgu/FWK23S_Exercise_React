@@ -2,7 +2,6 @@
     color: rgb(251, 251, 251) ; /* !important to override default Bootstrap styles */
   }
   
-.nav-droppdown-cunstomn{
-  background-color: rgb(43, 17, 137);
-
+  .nav-dropdown-custom .dropdown-menu {
+    background-color: rgb(43, 17, 137);
   }

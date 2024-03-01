@@ -26,8 +26,8 @@ function MyNav({onSearch}) {
             <Nav.Link href="/usestete">Usestate</Nav.Link>
             <Nav.Link href="/props">Props</Nav.Link>
             <Nav.Link href="/useeffect">UseEffect</Nav.Link>
-            <NavDropdown className='nav-droppdown-cunstom' title="Dropdown" id="basic-nav-dropdown">
-              <NavDropdown.Item href="#action/3.1">Action</NavDropdown.Item>
+            <NavDropdown className='nav-dropdown-cunstom' title="Dropdown" id="basic-nav-dropdown">
+              <NavDropdown.Item href="/todo">TodoList</NavDropdown.Item>
               <NavDropdown.Item href="#action/3.2">
                 Another action
               </NavDropdown.Item>
