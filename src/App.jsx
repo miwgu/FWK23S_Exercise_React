@@ -8,6 +8,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import MyNav from './components/nav/MyNav'
 import { useState } from 'react'
 import TodoList_Page from './TodoList_Page'
+import Meal_Page from './Meal_Page'
 
 function App() {
   const [searchTerm, setSearchTerm]= useState('');
@@ -28,6 +29,7 @@ function App() {
      element={<UseEffect_Page searchTerm={searchTerm} />}
      />
      <Route path='/todo' element={<TodoList_Page/>}/>
+     <Route path='/meal' element={<Meal_Page searchTerm={searchTerm}/>}/>
     </Routes>
 
   </div>
