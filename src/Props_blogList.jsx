@@ -12,7 +12,7 @@ const Props_bloglist = ({ blogsArray, test }) => {
           <p>ID: {index}</p> 
           <p>Title: {blogItem.title}</p>
           <p>Body: {blogItem.body}</p>
-          <p>Author: {blogItem.auther}</p> {/* It seems like you have a typo here, it should be "author" instead of "auther" */}
+          <p>Author: {blogItem.author}</p> 
           
           <hr />
         </div>

@@ -8,6 +8,8 @@ const Meal_Page = ({searchTerm}) => {
     <Container>
     <div>Meal_Page</div>
     <Meal searchTerm= {searchTerm} />
+
+    
     </Container>
     </>
   )

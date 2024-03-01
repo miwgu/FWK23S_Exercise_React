@@ -1,5 +1,7 @@
 import React, { useState, useEffect } from 'react'
 import Image from 'react-bootstrap/Image';
+import Card from 'react-bootstrap/Card';
+import { Col, Row } from 'react-bootstrap';
 
 const Meal = ({searchTerm}) => {
 
@@ -48,17 +50,25 @@ const Meal = ({searchTerm}) => {
          {error && (
            <div>{`There is a problem fetching the post data - ${error}`}</div>
          )}
-         <ul>
+         
+        <Row>
            {data &&
              data.map(({ idMeal, strMeal, strMealThumb}) => (
-              <li key={idMeal}>
-                <h3>{strMeal}</h3>
-                <Image src={strMealThumb} rounded />
-              </li>
+                
+        <Col  sm={4} className="mb-2" key={idMeal}>
+            <Card style={{ width: '18rem' }} key={idMeal}>
+              <Card.Img variant="top" src={strMealThumb}  />
+              <Card.Body>
+                <Card.Title>{strMeal}
+              </Card.Title>
+
+            </Card.Body>
+          </Card>
+        </Col>
 
              ))}
-         </ul>
-
+            
+        </Row>
        </div>
      );
    }
