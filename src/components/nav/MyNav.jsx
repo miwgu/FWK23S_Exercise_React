@@ -18,7 +18,7 @@ function MyNav({onSearch}) {
   return (
     <Navbar bg="primary" expand="lg" fixed="top" >
       <Container>
-        <Navbar.Brand href="#home">React-Exercise</Navbar.Brand>
+        <Navbar.Brand href="/">React-Exercise</Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="me-auto  nav-link-custom">
