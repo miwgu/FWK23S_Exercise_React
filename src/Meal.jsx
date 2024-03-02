@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react'
+import { Link } from 'react-router-dom';
 import Image from 'react-bootstrap/Image';
 import Card from 'react-bootstrap/Card';
 import { Col, Row } from 'react-bootstrap';
@@ -56,14 +57,17 @@ const Meal = ({searchTerm}) => {
              data.map(({ idMeal, strMeal, strMealThumb}) => (
                 
         <Col  sm={4} className="mb-2" key={idMeal}>
+          
+          <Link to={`/meal-details/${idMeal}`} style={{ textDecoration: 'none' }}>
             <Card style={{ width: '18rem' }} key={idMeal}>
               <Card.Img variant="top" src={strMealThumb}  />
               <Card.Body>
                 <Card.Title>{strMeal}
               </Card.Title>
-
+              {/* <Link to={`/meal-details/${idMeal}`}>View Details</Link> */}
             </Card.Body>
           </Card>
+          </Link>
         </Col>
 
              ))}

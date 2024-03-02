@@ -9,6 +9,7 @@ import MyNav from './components/nav/MyNav'
 import { useState } from 'react'
 import TodoList_Page from './TodoList_Page'
 import Meal_Page from './Meal_Page'
+import MealDetails from './MealDetails'
 
 function App() {
   const [searchTerm, setSearchTerm]= useState('');
@@ -30,6 +31,7 @@ function App() {
      />
      <Route path='/todo' element={<TodoList_Page/>}/>
      <Route path='/meal' element={<Meal_Page searchTerm={searchTerm}/>}/>
+     <Route path="/meal-details/:mealId" element={<MealDetails />} />
     </Routes>
 
   </div>
