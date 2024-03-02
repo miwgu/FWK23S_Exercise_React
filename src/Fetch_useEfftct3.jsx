@@ -1,17 +1,19 @@
 import { useState, useEffect } from 'react'
 import TodoList from './TodoList'
-
+import { Spinner } from 'react-bootstrap'; 
 
 function Fetch_useEfftct3() {
   // getter = todos, setter = setTodos, initieras som en tom array
   const [todos, setTodos] = useState([])
+  const [loading, setLoading] = useState(true);
 
   useEffect(() => {
     const getData = () => {
-      fetch('https://jsonplaceholder.typicode.com/todos')
+      fetch('https://jsonplaceholder.typicode.com/todos')   
         .then((res) => res.json())
         .then((data) => {
-          setTodos(data)
+          setTodos(data);
+          setLoading(false);
         })
     }
 
@@ -41,14 +43,20 @@ function Fetch_useEfftct3() {
 
   return (
     <>
-      {/* Om TODOs arrayen innehåller fler än noll element så ska komponenten TodoList visas, annars fallback text med att det inte är tillgängligt.. eftersom vi gör ett API anrop i vår useEffect hook */}
-      {todos.length > 0 ? (
+    {loading ? (
+      <Spinner animatuon ="border" role="status" style={{ color: 'blue' }}>
+        <span className='Visually-hidden'  > </span>
+      </Spinner> 
+    ):(
+      /* Om TODOs arrayen innehåller fler än noll element så ska komponenten TodoList visas, annars fallback text med att det inte är tillgängligt.. eftersom vi gör ett API anrop i vår useEffect hook */
+      todos.length > 0 ? (
         <TodoList todos={todos} handleCompleteTodo={completeTodo} />
       ) : (
         <div>Todos are not available yet..</div>
+      )
       )}
     </>
-  )
+  );
 }
 
 export default Fetch_useEfftct3
