@@ -11,7 +11,7 @@ import TodoList_Page from './TodoList_Page'
 import Meal_Page from './Meal_Page'
 import MealDetails from './MealDetails'
 
-function App() {
+function App( ) {
   const [searchTerm, setSearchTerm]= useState('');
 
   const handleSearch = (term) =>{
@@ -23,11 +23,11 @@ function App() {
   <MyNav onSearch={handleSearch} />
     <Routes>
      <Route path='/' element={<Home/>}/>
-     <Route path='/usestete' element={<UseState_page/>}/>
+     <Route path='/usestete' element={<UseState_page />}/>
      <Route path='/props' element={<Props_page/>}/>
      <Route 
      path='/useeffect' 
-     element={<UseEffect_Page searchTerm={searchTerm} />}
+     element={<UseEffect_Page searchTerm={searchTerm}/>}
      />
      <Route path='/todo' element={<TodoList_Page/>}/>
      <Route path='/meal' element={<Meal_Page searchTerm={searchTerm}/>}/>

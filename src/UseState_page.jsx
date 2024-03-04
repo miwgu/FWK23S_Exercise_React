@@ -12,9 +12,11 @@ import App_8AddName from './App_8AddName'
 const UseState_page = () => {
   return (
     <>
+  
+  <div>
     <div>UseState_page</div>
     <App_1value />
-    <App_2count/>
+    <App_2count />
     <App_2_2count/>
     <App_3obj />
     <App_4Array />
@@ -22,7 +24,9 @@ const UseState_page = () => {
     <App_6Name />
     <App_7MouseHover />
     <App_8AddName />
-
+  
+  </div>
+    
     </>
 
   )
