@@ -22,7 +22,7 @@ const TodoList = ({ todos, handleCompleteTodo }) => {
       {todos.map((todo, i) => (
         <>
          <li key={i}>
-            <strong>Titel:</strong> {todo.id}
+            <strong>Id:</strong> {todo.id}
           </li>
           <li key={i}>
             <strong>Titel:</strong> {todo.title}
