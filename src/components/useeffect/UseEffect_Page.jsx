@@ -2,7 +2,7 @@ import React from 'react'
 import Fetch_useEfftct from './Fetch_useEfftct'
 import Fetch_useEfftct2 from './Fetch_useEfftct2'
 import TimerAndCount_useEffect from './TimerAndCount_useEffect'
-import Fetch_useEfftct3 from './Fetch_useEfftct3'
+import Fetch_useEfftct3 from '../todo_list/Fetch_useEfftct3'
 
 const UseEffect_Page = ({searchTerm}) => {
   return (

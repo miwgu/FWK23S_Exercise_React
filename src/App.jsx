@@ -1,15 +1,15 @@
 import './App.css'
 import { Routes, Route } from 'react-router-dom'
-import Home from './Home'
-import UseState_page from './UseState_page'
-import Props_page from './Props_page'
-import UseEffect_Page from './UseEffect_Page'
+import Home from './components/home/Home'
+import UseState_page from './components/usestate/UseState_page'
+import Props_page from './components/props/Props_page'
+import UseEffect_Page from './components/useeffect/UseEffect_Page'
 import 'bootstrap/dist/css/bootstrap.min.css';
 import MyNav from './components/nav/MyNav'
 import { useState } from 'react'
-import TodoList_Page from './TodoList_Page'
-import Meal_Page from './Meal_Page'
-import MealDetails from './MealDetails'
+import TodoList_Page from './components/todo_list/TodoList_Page'
+import Meal_Page from './components/meals/Meal_Page'
+import MealDetails from './components/meals/MealDetails'
 
 function App( ) {
   const [searchTerm, setSearchTerm]= useState('');

@@ -1,6 +1,7 @@
 import React from 'react'
 import Card from 'react-bootstrap/Card';
 
+//I do not use this component
 const Meal_Card = () => {
   return (
 <>
